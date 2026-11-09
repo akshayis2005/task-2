@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rask Traker</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+
+<nav class="bg-neutral-primary fixed w-full z-20 top-0 start-0 border-default">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <h1 class="text-center" >Task Traker</h1>
+    
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+    <div class="col-4 ">
+        <div class=" card-container  mt-5">
+                <input type="text" class="form-control" placeholder="Enter" id="task">
+                <br>
+        </div>
+        <div class="d-flex">
+         <button class="btn btn-primary " onclick="Add()">Add Task</button>
+
+        </div>
+
+    </div>
+
+    <div id="result">
+            
+
+<div class="relative overflow-x-auto">
+    <table class="w-full text-sm text-left rtl:text-right text-body">
+        <thead class="text-sm text-body bg-neutral-secondary-medium">
+            <tr>
+                <th scope="col" class="px-6 py-3 rounded-s-base font-medium">
+                    Tasks
+                </th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-neutral-primary">
+           
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="font-semibold text-heading">
+                <th scope="row" class="px-6 py-3 text-base">Total</th>
+                <td class="px-6 py-3">3</td>
+                <td class="px-6 py-3">21,000</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+    </div>
+
+</div>
+
+</body>
+<script>
+    let List = []
+
+    function Add()
+    {
+        let task = document.getElementById('task').value.trim()
+
+        console.log(task);
+          
+        if(task==""){
+            alert("value Requered")
+        }
+        localStorage.setItem("task",task)
+
+        localStorage.getItem()
+
+        List.push(task)
+      
+    }
+
+
+
+    
+
+</script>
+</html>
+
